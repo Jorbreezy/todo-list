@@ -1,0 +1,135 @@
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Remind Me</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="nameModal modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> 
+            <center>
+              <h2 class="modal-title" id="myModalLabel">What is your name?</h2>
+            </center> 
+          </div>
+
+          <div class="modal-body">
+
+            <center>
+              <input type='text' class='blue' onKeyPress="enterKeyPress(event, this)"/>
+              <br />
+            </center>
+        </div>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="box">
+          <div class="col-lg-12 text-center">
+
+            <h2 class="brand-before">
+              <small>Welcome to</small>
+            </h2>
+            <h1 class="brand-name">Remind Me</h1>
+            <hr class="tagline-divider">
+            <h2>
+
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="box">
+          <div class="col-lg-12">
+            <hr>
+            <h2 class="intro-text text-center"><strong>Welcome, <span id='naMe'></span></strong>
+            </h2>
+            <hr>
+            <br />
+            <center /><h2>What is your main focus for today?</h2>
+            <br />
+            <br />
+            <input type='text' id='info' class='hide' type="hidden"/>
+            <input type='text' class='red' onKeyPress="enterPressAlert(event, this)"/>
+            <br />
+            <h3 class='life'></h3>
+            <button class='delete btn btn-danger'>Delete Everything</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <p>Copyright &copy; Jordan Corp. 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> 
+            <center>
+              <h2 class="modal-title" id="myModalLabel">Edit Your Item</h2>
+            </center> 
+          </div>
+
+          <div class="modal-body">
+
+            <center>
+              <h3 class='editer'>Welcome</h3>
+              <input type='text' class='red' id="edit"></input>
+              <br />
+             
+            </center>
+          </div>
+
+          <div class="modal-footer">
+            <button class="edit btn btn-primary">Edit</button>
+            <button id="btn1" class="btn btn-danger">Delete Item</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+      $('.carousel').carousel({
+        interval: 5000 //changes the speed
+      })
+    </script>
+
+  </body>
+
+</html>
